@@ -41,7 +41,7 @@ pipeline {
                     git config --global user.email "ajinkyabandurkar@gmail.com"
                     git config --global user.name "Ajinkya Bandurkar"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i 's/tag: .*/tag: "2"/' helm/go-web-app-chart/values.yaml
+                    sed -i 's/tag: .*/tag: "${{BUILD_NUMBER}}"/' helm/go-web-app-chart/values.yaml
                     git add helm/go-web-app-chart/values.yaml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
