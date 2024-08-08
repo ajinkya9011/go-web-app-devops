@@ -8,8 +8,8 @@ image:
   repository: devops8983.azurecr.io/web
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: replaceImageTag
-  #replaceImageTag
+  tag: 9
+  #9
 
 ingress:
   enabled: false
