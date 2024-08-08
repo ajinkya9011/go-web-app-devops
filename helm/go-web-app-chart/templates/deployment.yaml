@@ -19,7 +19,4 @@ spec:
       - name: go-web-app
         image: devops8983.azurecr.io/web:{{ .Values.image.tag }}
         ports:
-        imagePullPolicy: IfNotPresent
-        - containerPort: 8080
-      imagePullSecrets:
-        - name: acr-secret  
+        - containerPort: 8080  
